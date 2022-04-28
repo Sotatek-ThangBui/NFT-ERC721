@@ -11,6 +11,8 @@ npx hardhat clean
 yarn add @openzeppelin/contracts
 npx hardhat test
 npx hardhat node
-node scripts/sample-script.js
+npx hardhat run scripts/deployNFT.js --network rinkeby
+npx hardhat run scripts/deploy.js --network rinkeby
+npx hardhat run scripts/upgradev2.js --network rinkeby
 npx hardhat help
 ```

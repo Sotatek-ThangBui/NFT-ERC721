@@ -20,10 +20,16 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 const {api_key, private_key, mnemonic} = process.env;
 module.exports = {
   solidity: "0.8.4",
+  settings: {
+    optimizer: {
+      enabled: true,
+      runs: 200,
+    },
+  },
   networks: {
     rinkeby: {
       url: `https://eth-rinkeby.alchemyapi.io/v2/${api_key}`,
-      accounts: [`0x${private_key}`],
+      accounts: [private_key],
     },
     hardhat: {
       chainId: 4,

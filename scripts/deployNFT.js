@@ -3,8 +3,8 @@ const hre = require("hardhat");
 async function main() {
     const ethers = hre.ethers;
 
-    const TWTK = await ethers.getContractFactory("TheWinTKNFT");
-    const nft = await TWTK.deploy();
+    const NFTThewinTK = await ethers.getContractFactory("NFTThewinTK");
+    const nft = await NFTThewinTK.deploy();
 
     console.log("Contract deployed to address:", nft.address);
 }
